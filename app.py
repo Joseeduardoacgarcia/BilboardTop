@@ -57,9 +57,6 @@ artista_input = st.text_input("Nombre del Artista:", "Ed Sheeran")
 cancion_input = st.text_input("Nombre de la Canción:", "Shape of You")
 
 if st.button("⚡ Predecir Éxito"):
-    if not api_key:
-        st.error("Por favor ingresa tu API Key de Gemini en la barra lateral.")
-    else:
         with st.spinner("Analizando características musicales con IA..."):
             try:
                 client = genai.Client(api_key=api_key)
