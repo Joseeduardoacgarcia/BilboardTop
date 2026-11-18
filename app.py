@@ -13,6 +13,9 @@ st.set_page_config(page_title="Billboard Predictor App", page_icon="🎵", layou
 st.title("🎵 Billboard 100 Predictor & Preview")
 st.write("Ingresa el nombre de un artista y una canción para predecir si será un éxito en el Billboard y escuchar un preview.")
 
+# Cargar la API Key de forma automática y segura desde los secretos de Streamlit
+api_key = st.secrets["GEMINI_API_KEY"]
+
 # Columnas requeridas por el modelo
 columnas_modelo = [
     'tempo', 'durationSeg', 'anioNacimiento', 'chart_year', 'edad_artista',
